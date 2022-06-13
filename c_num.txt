@@ -1,0 +1,72 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int num[917504];
+    int aux = 0;
+    int aux_7, aux_6, aux_5, aux_4, aux_3, aux_2, aux_1, aux_0;
+    int i=0, con=0;
+    int j=3500000;
+    int c=1;
+    int rip[10]={0,0,0,0,0,0,0,0,0,0};
+    int arr;
+    
+    for(i;num[con-1]<9999980;i++)
+    {
+        
+        for(arr=0;arr<10;arr++)
+        {rip[arr]=0;}
+        
+        aux = j+c;
+        aux_7=aux/1000000;
+        aux_0=aux_7*1000000;
+        rip[aux_7]=rip[aux_7]+1;
+        
+        
+        aux_6=(aux-aux_0)/100000;
+        aux_0=aux_0+aux_6*100000;
+        rip[aux_6]=rip[aux_6]+1;
+        
+        aux_5=(aux-aux_0)/10000;
+        aux_0=aux_0+aux_5*10000;
+        rip[aux_5]=rip[aux_5]+1;
+        
+        aux_4=(aux-aux_0)/1000;
+        aux_0=aux_0+aux_4*1000;
+        rip[aux_4]=rip[aux_4]+1;
+        
+        aux_3=(aux-aux_0)/100;
+        aux_0=aux_0+aux_3*100;
+        rip[aux_3]=rip[aux_3]+1;
+        
+        aux_2=(aux-aux_0)/10;
+        aux_0=aux_0+aux_2*10;
+        rip[aux_2]=rip[aux_2]+1;
+        
+        aux_1=(aux-aux_0)/1;
+        aux_0=aux_0+aux_4*1;
+        rip[aux_1]=rip[aux_1]+1;
+        
+        if(aux_2==2 || aux_2==4 || aux_2==6 || aux_2== 8||aux_2==0 ) // seconda cifra pari
+        {
+          
+            if (aux_1==1 || aux_1==3 || aux_1==5 || aux_1==7 || aux_1==9 ) // numero dispari aux 1
+            {
+                if (rip[9]==1 && rip[8]>0 && rip[7]<5 &&rip[6]<5 && rip[5]<5 && rip[4]<5 && rip[3]<5 && rip[2]==0 && rip[1]<5 && rip[0]<5)
+                {
+                    num[con]=aux;
+                    printf("\n %d %d ",con, num[con]);
+                    con=con+1;
+                    c=c+1;
+                }
+                else {c=c+1;}
+                       
+            }
+            else {c=c+1;}
+        
+        }
+        else {c=c+1;}
+    }
+    return 0;
+}
